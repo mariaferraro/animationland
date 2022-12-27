@@ -31,7 +31,7 @@
         top: 65px;
         left: 110px;
     }
-    .score:after {
+    .score::after {
         content: counter(game);
     }
     body {
@@ -68,6 +68,7 @@
       display: block;
     }
 
+    /* Dory */
     .layer-1 {
       background: transparent;
       bottom: 0;
@@ -99,6 +100,7 @@
       }
     }
 
+    /* Nemo */
     .layer-2 {
       background: transparent;
       bottom: 0;
@@ -136,6 +138,7 @@
       }
     }
 
+    /* Center Rocks */
     .layer-3 {
       background: transparent;
       background-image: url(./images/stones.png);
@@ -151,6 +154,7 @@
       z-index: 3;
     }
 
+    /* Squirt */
     .layer-4 {
       background: transparent;
       bottom: 0;
@@ -182,6 +186,7 @@
       }
     }
 
+    /* Left Stones */
     .layer-5 {
       background: transparent;
       background-image: url(./images/left-layer.png);
@@ -195,6 +200,7 @@
       border-radius: 0 0 0 30px;
     }
 
+    /* Tad */
     .layer-6 {
       background: transparent;
       bottom: 0;
@@ -226,6 +232,7 @@
       }
     }
 
+    /* Right Stones */
     .layer-7 {
       background: transparent;
       background-image: url(./images/right-layer.png);
@@ -240,6 +247,7 @@
       border-radius: 0 0 30px 0;
     }
 
+    /* Center anemones */
     .layer-8 {
       background: transparent;
       background-image: url(./images/center-layer.png);
@@ -256,6 +264,7 @@
       animation: breath 5.6s infinite;
     }
 
+    /* Left anemones */
     .layer-9 {
       background: transparent;
       background-image: url(./images/corner-layer.png);
@@ -269,6 +278,7 @@
       border-radius: 0 0 0 30px;
     }
 
+    /* Right anemones */
     .layer-10 {
       background: transparent;
       background-image: url(./images/corner-layer-2.png);
@@ -302,8 +312,6 @@
 </head>
 <body>
     <div class="phone">
-        <img src="./images/nemo-logo.png" class="logo" alt="Disney Logo"/>
-        <h3 class="total-count">Score: </h3>
 
         <!-- Dory -->
         <div class="layer-1">
@@ -317,6 +325,7 @@
           <img src="./images/nemo.png" class="nemo-img" />
         </div> 
 
+        <!-- Center Rocks -->
         <div class="layer-3"></div> 
 
         <!-- Squirt -->
@@ -325,6 +334,7 @@
           <img src="./images/squirt.png" class="squirt-img" />
         </div> 
 
+        <!-- Left Stones -->
         <div class="layer-5"></div> 
 
         <!-- Tad -->
@@ -333,10 +343,19 @@
           <img src="./images/tad.png" class="tad-img" />
         </div> 
 
+        <!-- Right Stones -->
         <div class="layer-7"></div> 
+
+        <!-- Center anemones -->
         <div class="layer-8"></div> 
+        <!-- Left anemones -->
         <div class="layer-9"></div> 
+        <!-- Right anemones -->
         <div class="layer-10"></div> 
+
+        <img src="./images/nemo-logo.png" class="logo" alt="Disney Logo"/>
+        <h3 class="total-count">Score: </h3>
+
     </div>
 </body>
 </html>
