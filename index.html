@@ -6,34 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS-only Tap Game by Maria Ferraro</title>
     <style>
-    body{
-        counter-reset: game;
-    }
-    input[type=checkbox] {
-        appearance: none;
-        cursor: pointer;
-        position: absolute;
-        width: 80px;
-        height: 130px;
-        top: 0;
-        z-index: 2;
-    }
-    input[type=checkbox]:focus {
-        appearance: none;
-        outline: none;    
-    }
-    input:checked {
-        counter-increment: game;
-    }
-    .score {
-        position: absolute;
-        letter-spacing: 2.5px;
-        top: 65px;
-        left: 110px;
-    }
-    .score::after {
-        content: counter(game);
-    }
     body {
       display: grid;
       height: 100vh;
@@ -55,7 +27,40 @@
       height: 600px;
       position: relative;
       width: 300px;
+      counter-reset: game;
     }
+    body{
+        counter-reset: game;
+    }
+
+    /* How the game works */
+    input[type=checkbox] {
+        appearance: none;
+        cursor: pointer;
+        position: absolute;
+        width: 80px;
+        height: 130px;
+        top: 0;
+        z-index: 2;
+    }
+    input[type=checkbox]:focus {
+        appearance: none;
+        outline: none;    
+    }
+    input:checked {
+        counter-increment: game;
+    }
+    .total-count {
+        position: absolute;
+        letter-spacing: 2.5px;
+        top: 65px;
+        left: 110px;
+    }
+    .total-count:after {
+        content: counter(game);
+    }
+
+
     .logo{
         width: 100px;
         margin: 10px auto 0;
